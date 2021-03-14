@@ -14,4 +14,4 @@ func _physics_process(delta):
 		Input.is_action_pressed("ui_down") and Input.is_action_pressed("ui_up"):
 		impulse = impulse.linear_interpolate(Vector3.ZERO, acceleration / 2)
 	
-	var collision = move_and_collide(impulse * delta)
+	move_and_collide(impulse * delta)
